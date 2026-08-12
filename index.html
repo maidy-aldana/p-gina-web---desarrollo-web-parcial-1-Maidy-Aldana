@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Un recorrido por el café de Guatemala, sus regiones y su preparación.">
+    <title>Raíces de Café | Guatemala</title>
+
+    <!-- Framework: Tailwind CSS (versión precompilada, sin JavaScript) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+
+    <!-- Estilos personalizados del proyecto -->
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body class="bg-yellow-50 text-gray-800">
+    <!-- Header: presentación del sitio -->
+    <header id="inicio" class="relative">
+        <div class="encabezado-contenido flex flex-col justify-center items-start">
+            <p class="etiqueta">Del origen a tu taza</p>
+            <h1>Raíces de Café</h1>
+            <p class="introduccion">
+                Un recorrido por los aromas, paisajes y personas que hacen único
+                al café de Guatemala.
+            </p>
+            <a class="boton-principal inline-block px-6 py-3 rounded-full font-bold transition duration-300" href="#historia">
+                Comenzar recorrido
+            </a>
+        </div>
+    </header>
+
+    <!-- Nav: enlaces internos -->
+    <nav class="sticky top-0 z-10">
+        <div class="contenedor menu-contenido flex flex-col sm:flex-row justify-between items-start sm:items-center">
+            <a class="marca" href="#inicio">Raíces</a>
+            <ul class="menu flex flex-wrap items-center">
+                <li><a href="#historia">Historia</a></li>
+                <li><a href="#regiones">Regiones</a></li>
+                <li><a href="#preparacion">Preparación</a></li>
+                <li><a href="#datos">Datos</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main: contenido principal y complementario -->
+    <main class="contenedor distribucion-principal flex flex-col lg:flex-row items-start gap-8 py-16">
+        <!-- Article con exactamente tres secciones -->
+        <article class="w-full lg:w-3/4 flex flex-col gap-8">
+            <section id="historia" class="bloque historia flex flex-col md:flex-row items-center gap-8 bg-white p-8 rounded-2xl shadow-lg">
+                <div class="texto-seccion flex-1">
+                    <p class="numero">01 · Tradición</p>
+                    <h2>Una historia cultivada en altura</h2>
+                    <p>
+                        El café guatemalteco crece entre montañas, volcanes y
+                        microclimas. Su cultivo reúne conocimiento, paciencia y
+                        trabajo familiar desde la selección de la semilla hasta
+                        la cosecha de cada fruto maduro.
+                    </p>
+                    <a class="enlace-texto inline-block mt-4 font-bold" href="https://www.anacafe.org/" target="_blank" rel="noopener">
+                        Conocer más sobre el café nacional →
+                    </a>
+                </div>
+                <img
+                    class="w-full md:w-5/12 h-80 object-cover rounded-2xl transition duration-500"
+                    src="https://images.unsplash.com/photo-1447933601403-0c6688de566e?auto=format&fit=crop&w=900&q=85"
+                    alt="Granos de café tostado sobre una mesa"
+                >
+            </section>
+
+            <section id="regiones" class="bloque regiones p-8 rounded-2xl shadow-lg">
+                <div class="titulo-seccion text-center">
+                    <p class="numero">02 · Orígenes</p>
+                    <h2>Tres regiones, tres personalidades</h2>
+                    <p>Cada territorio aporta características diferentes a la taza.</p>
+                </div>
+
+                <div class="contenedor-tarjetas flex flex-wrap justify-center items-stretch gap-5">
+                    <div class="tarjeta flex-1 p-6 bg-white rounded-xl shadow-md transition duration-300">
+                        <span class="text-4xl">🌋</span>
+                        <h3 class="font-bold">Antigua</h3>
+                        <p>Café equilibrado, aromático y con notas de chocolate.</p>
+                    </div>
+
+                    <div class="tarjeta flex-1 p-6 bg-white rounded-xl shadow-md transition duration-300">
+                        <span class="text-4xl">⛰️</span>
+                        <h3 class="font-bold">Huehuetenango</h3>
+                        <p>Tazas brillantes, frutales y con una acidez agradable.</p>
+                    </div>
+
+                    <div class="tarjeta flex-1 p-6 bg-white rounded-xl shadow-md transition duration-300">
+                        <span class="text-4xl">🌿</span>
+                        <h3 class="font-bold">Atitlán</h3>
+                        <p>Cuerpo completo y aromas influenciados por suelo volcánico.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="preparacion" class="bloque preparacion flex flex-col md:flex-row items-center gap-8 p-8 rounded-2xl shadow-lg">
+                <img
+                    class="w-full md:w-5/12 h-80 object-cover rounded-2xl transition duration-500 order-2 md:order-none"
+                    src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=900&q=85"
+                    alt="Preparación artesanal de una taza de café"
+                >
+                <div class="texto-seccion flex-1">
+                    <p class="numero">03 · Experiencia</p>
+                    <h2>Prepara una mejor taza</h2>
+                    <ol>
+                        <li>Utiliza café fresco y muélelo antes de prepararlo.</li>
+                        <li>Calienta agua limpia sin dejar que hierva demasiado.</li>
+                        <li>Respeta la proporción entre café y agua.</li>
+                        <li>Sirve y disfruta sus aromas sin prisa.</li>
+                    </ol>
+                </div>
+            </section>
+        </article>
+
+        <!-- Aside: información relacionada -->
+        <aside id="datos" class="w-full lg:w-1/4 p-7 rounded-2xl shadow-xl lg:sticky">
+            <p class="etiqueta-aside">Dato destacado</p>
+            <h2>¿Sabías que...?</h2>
+            <p>
+                La altura, el clima y el tipo de suelo influyen en el aroma,
+                cuerpo y acidez que se perciben en cada taza.
+            </p>
+            <div class="dato flex flex-col">
+                <strong>8</strong>
+                <span>regiones cafetaleras reconocidas en Guatemala</span>
+            </div>
+            <a href="#regiones">Explorar las regiones</a>
+        </aside>
+    </main>
+
+    <!-- Footer: cierre y enlaces -->
+    <footer>
+        <div class="contenedor pie-contenido flex flex-col md:flex-row justify-between items-start md:items-center gap-8">
+            <div>
+                <h2>Raíces de Café</h2>
+                <p>Proyecto educativo de diseño web · Guatemala, 2026</p>
+            </div>
+            <a href="#inicio">Volver arriba ↑</a>
+        </div>
+    </footer>
+</body>
+
+</html>

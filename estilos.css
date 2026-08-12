@@ -1,0 +1,213 @@
+:root {
+    --oscuro: #2d1b12;
+    --cafe: #72442d;
+    --terracota: #b9603c;
+    --crema: #f7f0e3;
+    --beige: #e8d8c0;
+    --verde: #3f5c48;
+    --blanco: #fff;
+}
+
+/* Selectores universales y por etiqueta */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+    color: #392b25;
+    background: var(--crema);
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.7;
+}
+
+img { display: block; max-width: 100%; }
+a { color: inherit; }
+
+.contenedor {
+    width: 90%;
+    max-width: 1180px;
+    margin: auto;
+}
+
+/* Header */
+#inicio { position: relative; }
+
+header {
+    height: 650px;
+    min-height: 520px;
+    color: var(--blanco);
+    background:
+        linear-gradient(90deg, rgba(35, 20, 13, .88), rgba(35, 20, 13, .25)),
+        url("https://images.unsplash.com/photo-1498804103079-a6351b050096?auto=format&fit=crop&w=1700&q=85") center/cover;
+}
+
+.encabezado-contenido {
+    width: 90%;
+    max-width: 1180px;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 18px;
+}
+
+.etiqueta,
+.numero,
+.etiqueta-aside {
+    font-size: .8rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.etiqueta { color: #f3bf86; letter-spacing: 4px; }
+.numero { margin-bottom: 10px; color: var(--terracota); }
+.etiqueta-aside { margin-bottom: 10px; }
+
+header h1 {
+    max-width: 720px;
+    font: bold clamp(4rem, 10vw, 7.5rem)/.9 Georgia, serif;
+}
+
+.introduccion { max-width: 600px; font-size: 1.2rem; }
+
+.boton-principal {
+    margin-top: 10px;
+    color: var(--oscuro);
+    background: #f3bf86;
+    border: 2px solid #f3bf86;
+    text-decoration: none;
+}
+
+.boton-principal:hover {
+    color: var(--blanco);
+    background: transparent;
+    transform: translateY(-4px);
+}
+
+/* Nav */
+nav {
+    padding: 16px 0;
+    color: var(--blanco);
+    background: var(--oscuro);
+    border-bottom: 3px solid var(--terracota);
+}
+
+.menu-contenido,
+.menu { gap: 26px; }
+
+.marca {
+    color: #f3bf86;
+    font: bold 1.5rem Georgia, serif;
+    text-decoration: none;
+}
+
+.menu { list-style: none; }
+
+.menu a {
+    padding: 7px 3px;
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    transition: .25s;
+}
+
+.menu a:hover { color: #f3bf86; border-color: #f3bf86; }
+
+/* Article y sus tres sections */
+article { min-width: 0; }
+
+.bloque {
+    border: 1px solid var(--beige);
+    transition: box-shadow .3s;
+}
+
+.bloque h2,
+aside h2 {
+    margin-bottom: 14px;
+    color: var(--oscuro);
+    font: bold clamp(2rem, 4vw, 3rem)/1.1 Georgia, serif;
+}
+
+.historia img:hover,
+.preparacion img:hover {
+    filter: contrast(1.08) saturate(1.15);
+    transform: scale(1.04) rotate(1deg);
+}
+
+.enlace-texto {
+    color: var(--terracota);
+    text-decoration: none;
+    transition: .25s;
+}
+
+.enlace-texto:hover { color: var(--verde); transform: translateX(5px); }
+
+.regiones { background: #f0e5d4; }
+
+.titulo-seccion {
+    max-width: 650px;
+    margin: 0 auto 28px;
+}
+
+.tarjeta {
+    min-width: 190px;
+    border-bottom: 5px solid var(--terracota);
+}
+
+.tarjeta:hover {
+    transform: translateY(-9px);
+    box-shadow: 0 14px 24px rgba(45, 27, 18, .16);
+}
+
+.tarjeta h3 {
+    margin: 10px 0 5px;
+    color: var(--verde);
+    font: bold 1.4rem Georgia, serif;
+}
+
+.preparacion { color: var(--blanco); background: var(--verde); }
+.preparacion h2, .preparacion .numero { color: var(--blanco); }
+.preparacion ol { padding-left: 22px; }
+.preparacion li { margin-bottom: 8px; }
+
+/* Aside */
+aside {
+    top: 95px;
+    background: #f3bf86;
+    border: 3px solid var(--oscuro);
+    box-shadow: 8px 8px 0 var(--oscuro);
+}
+
+.dato {
+    gap: 2px;
+    margin: 24px 0;
+    padding: 18px 0;
+    border-block: 1px solid var(--cafe);
+}
+
+.dato strong { color: var(--oscuro); font: bold 4rem/1 Georgia, serif; }
+
+aside a {
+    color: var(--oscuro);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+aside a:hover { opacity: .65; }
+
+/* Footer */
+footer { padding: 45px 0; color: var(--blanco); background: var(--oscuro); }
+footer h2 { color: #f3bf86; font-family: Georgia, serif; }
+footer a { color: #f3bf86; text-decoration: none; }
+footer a:hover { color: var(--blanco); }
+
+@media (max-width: 620px) {
+    header { height: 540px; }
+    .menu { gap: 10px 18px; }
+}
